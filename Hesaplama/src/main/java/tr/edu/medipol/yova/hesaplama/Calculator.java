@@ -3,7 +3,7 @@ package tr.edu.medipol.yova.hesaplama;
 public final class Calculator {
 
 	private Calculator() {
-		
+		// private - new onlemek icin
 	}
 
 	public static int sum(int number1, int number2) {
