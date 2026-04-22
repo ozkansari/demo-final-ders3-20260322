@@ -29,3 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file Hesaplama/pom.xml
+    - name: Jacoco Summary
+      uses: jjmrocha/jacoco-summary@v1
+      with:
+        jacoco-csv-file: /Hesaplama/target/site/jacoco/jacoco.csv
+        
