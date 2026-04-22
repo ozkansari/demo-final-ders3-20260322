@@ -19,6 +19,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      pull-requests: write
+
     steps:
     - uses: actions/checkout@v6
     - name: Set up JDK 21
@@ -33,4 +36,9 @@ jobs:
       uses: jjmrocha/jacoco-summary@v1.1.1
       with:
         jacoco-csv-file: /Hesaplama/target/site/jacoco/jacoco.csv
+    - name: Add coverage to PR
+      uses: madrapps/jacoco-report@v1.7.2
+      with:
+        paths: /Hesaplama/target/site/jacoco/jacoco.xml
+        token: ${{ secrets.GITHUB_TOKEN }}
         
