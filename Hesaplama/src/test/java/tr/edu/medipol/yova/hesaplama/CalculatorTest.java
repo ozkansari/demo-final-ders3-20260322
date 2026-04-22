@@ -54,4 +54,10 @@ class CalculatorTest {
 		}
 	}
 
+	class PowerTests {
+		void testPowerSimple() {
+			int actual = Calculator.power(2, 3);
+			assertEquals(8, actual);
+		}
+	}
 }
